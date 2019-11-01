@@ -3,6 +3,7 @@ package com.ray.mybatis_plus.bean.emp;
 import com.ray.mybatis_plus.common.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -13,7 +14,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author ray
- * @since 2019-10-31
+ * @since 2019-11-01
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

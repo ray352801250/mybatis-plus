@@ -4,7 +4,8 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.ray.mybatis_plus.bean.emp.CompanyTemplate">
-        <id column="id" property="id" />
+    <result column="id" property="id" />
+    <result column="create_time" property="createTime" />
     <result column="update_time" property="updateTime" />
         <result column="company_org_id" property="companyOrgId" />
         <result column="template_no" property="templateNo" />
@@ -12,13 +13,14 @@
         <result column="title" property="title" />
         <result column="description" property="description" />
         <result column="signature_image_name" property="signatureImageName" />
-        <result column="create_time" property="createTime" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
+        id,
+        create_time,
         update_time,
-        id, company_org_id, template_no, expire_time, title, description, signature_image_name, create_time
+        company_org_id, template_no, expire_time, title, description, signature_image_name
     </sql>
 
 </mapper>

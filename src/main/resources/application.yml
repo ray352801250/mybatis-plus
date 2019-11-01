@@ -6,9 +6,11 @@ spring:
 server:
   port: 8080
 mybatis-plus:
-  config-location: classpath:mybatis/mybatis-config.xml
-  mapper-locations: classpath:mapper/emp/*.xml
-  type-aliases-package: com.ray.mybatis_plus.emp.entity
+#  config-location: classpath:mybatis/mybatis-config.xml
+#  mapper-locations: classpath:mapper/**/*.xml
+#  type-aliases-package: com.ray.mybatis_plus.emp.entity
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.ray.mybatis_plus.bean.emp
 
 
 

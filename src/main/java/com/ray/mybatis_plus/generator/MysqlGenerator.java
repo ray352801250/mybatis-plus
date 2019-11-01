@@ -1,7 +1,9 @@
-package com.ray.mybatis_plus.util;
+package com.ray.mybatis_plus.generator;
 
 import com.baomidou.mybatisplus.annotation.DbType;
+import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
@@ -14,6 +16,7 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 /**
  * @Description:
@@ -155,8 +158,17 @@ public class MysqlGenerator {
 //        GlobalConfig gc = new GlobalConfig();
 //        String projectPath = System.getProperty("user.dir");
 //        gc.setOutputDir(projectPath + "/src/main/java");
-//        gc.setAuthor("ray");
 //        gc.setOpen(false);
+//        gc.setBaseColumnList(true);
+//        gc.setBaseResultMap(true);
+//        gc.setMapperName("%sMapper");
+//        gc.setXmlName("%sMapper");
+//        gc.setServiceName("%sService");
+//        gc.setServiceImplName("%sServiceImpl");
+//        gc.setControllerName("%sController");
+//
+//
+//        gc.setAuthor("ray");
 //        //实体属性 Swagger2 注解
 //        gc.setSwagger2(true);
 //        mpg.setGlobalConfig(gc);
@@ -232,20 +244,22 @@ public class MysqlGenerator {
 //        StrategyConfig strategy = new StrategyConfig();
 //        strategy.setNaming(NamingStrategy.underline_to_camel);
 //        strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-////        strategy.setSuperEntityClass("com.ray.mybatis_plus.common.BaseEntity");
 //        strategy.setEntityLombokModel(true);
 //        strategy.setRestControllerStyle(true);
+//        strategy.setEntityBuilderModel(true);
 //
-//        // 公共父类
-////        strategy.setSuperControllerClass("com.ray.mybatis_plus.common.BaseController");
+//        strategy.setSuperEntityClass("com.ray.mybatis_plus.common.BaseEntity");
+//        strategy.setSuperControllerClass("com.ray.mybatis_plus.common.BaseController");
 //        // 写于父类中的公共字段
-//        strategy.setSuperEntityColumns("id");
+//        strategy.setSuperEntityColumns("id","create_time", "update_time");
 //
 //        strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
-//        strategy.setControllerMappingHyphenStyle(true);
-//        strategy.setTablePrefix(pc.getModuleName() + "_");
+////        strategy.setControllerMappingHyphenStyle(true);
+////        strategy.setTablePrefix(pc.getModuleName() + "_");
 //        mpg.setStrategy(strategy);
 //        mpg.setTemplateEngine(new FreemarkerTemplateEngine());
 //        mpg.execute();
 //    }
+
+
 }
